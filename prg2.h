@@ -9,21 +9,26 @@ namespace prg2{
 
     //o tipo vetor dinâmico
 struct Vetor {
-    //area de armazendamento (o etor de fato)
+    //area de armazendamento (o vetor de fato)
     int * area;
 
     // a capacidade atual do vetor
-    using int tamanho;
+    unsigned int tamanho;
+
 
 };
 
 //operaçoes do vetor
-Vetor vetor_cria();
+Vetor vetor_cria(unsigned int capacidade);
+
+//Obtem o valor de uma posição do vetor
+int vetor_obtem(Vetor & v, unsigned int posicao);
+
+//Modifica o valor de uma posição do vetor
+void vetor_altera(Vetor & v, unsigned int posicao, int valor);
 
 //destroi um vetor
-void vetor_destroi(vetor & v);
-
-int vetor_obtem(const vetor & v, unsigned int posicao);
+void vetor_destroi(Vetor & v);
 
 }
 
